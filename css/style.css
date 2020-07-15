@@ -1,0 +1,32 @@
+body {
+    background-color: #FFDA1E;
+    color: #9D5F15;
+}
+
+
+/* -- Header -- */
+
+header {
+    height: 70vh;
+}
+
+header img {
+    padding-top: 60px;
+}
+
+h3 {
+    font-family: 'Ranchers', cursive;
+    font-size: 50px;
+}
+
+
+/* -- Main -- */
+
+main {
+    margin: 30px 30px;
+}
+
+main button {
+    margin: 10px;
+    padding: 20px;
+}
