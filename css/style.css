@@ -3,21 +3,10 @@ body {
     color: #9D5F15;
 }
 
+body.page-login {}
+
 
 /* -- Header -- */
-
-header {
-    height: 70vh;
-}
-
-header img {
-    padding-top: 60px;
-}
-
-h3 {
-    font-family: 'Ranchers', cursive;
-    font-size: 50px;
-}
 
 
 /* -- Main -- */
@@ -26,7 +15,11 @@ main {
     margin: 30px 30px;
 }
 
+main form {
+    margin-top: 20px;
+}
+
 main button {
-    margin: 10px;
-    padding: 20px;
+    margin: 10px 0px;
+    padding: 20px 0px;
 }
