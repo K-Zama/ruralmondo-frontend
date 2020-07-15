@@ -1,0 +1,1 @@
+# ruralmondo-frontend
