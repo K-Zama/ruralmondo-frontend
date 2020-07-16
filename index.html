@@ -23,7 +23,7 @@
             <div class="col-12 col-md-3">
                 <h3>Iniciar sesión</h3>
                 <hr>
-                <form>
+                <form id="formularioLogin">
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="username" class="form-control" id="username">
@@ -32,7 +32,10 @@
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Empezar las risas</button>
+                    <button type="submit" class="btn btn-primary btn-block" id="sendbtn">Empezar las risas</button>
+                    <div class="spinner-border text-primary" role="status" id="spiner">
+                        <span class="sr-only">Loading...</span>
+                    </div>
                 </form>
             </div>
         </div>
