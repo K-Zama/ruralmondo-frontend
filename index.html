@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Ruralmondo - Invite</title>
+    <title>Ruralmondo - Home</title>
 </head>
 
 <body class="page-login">
@@ -21,26 +21,17 @@
     <main class="container-fluid">
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-md-3">
-                <h3>Has sido invitado</h3>
+                <h2 class="text-center">Escoge tu alineación</h2>
+                <p class="text-muted text-center">Cada día tus jugadores saldrán a darte puntos, así que escoge bien con el presupuesto que tienes.</p>
                 <hr>
-                <form id="formularioLogin">
-                    <div class="form-group">
-                        <label for="username">Escoge un username para tu perfil</label>
-                        <input type="username" class="form-control" id="username">
+                <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Jugador 1</h5>
+                        <select name="select-player" id="select-player" class="custom-select">
+                            <option value="default">Selecciona tu jugador</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <label for="password">Pon un password</label>
-                        <input type="password" class="form-control" id="password">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Repite la password escogida</label>
-                        <input type="password" class="form-control" id="password1">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block" id="sendbtn">Enviar los datos de registro</button>
-                    <div class="spinner-border text-primary" role="status" id="spiner">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </main>
