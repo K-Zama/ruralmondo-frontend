@@ -1,0 +1,23 @@
+body {
+    background-color: #FFDA1E;
+    color: #9D5F15;
+}
+
+
+/* -- Header -- */
+
+
+/* -- Main -- */
+
+main {
+    margin: 30px 30px;
+}
+
+main form {
+    margin-top: 20px;
+}
+
+main button {
+    margin: 10px 0px;
+    padding: 20px 0px;
+}
