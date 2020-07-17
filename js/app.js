@@ -4,6 +4,7 @@
 
 const usernameLogin = document.querySelector("#username");
 const passwordLogin = document.querySelector("#password");
+const passwordLogin1 = document.querySelector("#password1");
 const formularioLogin = document.querySelector("#formularioLogin");
 const spiner = document.querySelector("#spiner");
 
@@ -14,7 +15,7 @@ formularioLogin.addEventListener("submit", e => {
     e.preventDefault();
 
 
-    if (usernameLogin.value === "" || passwordLogin.value === "") {
+    if (usernameLogin.value === "" || passwordLogin.value === "" || passwordLogin1 === "") {
         const error = document.createElement("p");
         error.innerHTML = `Por favor, no dejes ningún apartado sin rellenar`;
         error.classList = "alert alert-danger text-center";
@@ -25,7 +26,7 @@ formularioLogin.addEventListener("submit", e => {
     } else {
         spiner.style.display = "flex";
         const bienvenida = document.createElement("h5");
-        bienvenida.innerHTML = `¡Coge tu 9 de Airshoft con cañón turcao!`;
+        bienvenida.innerHTML = `¡Tus datos son correctos!`;
         bienvenida.classList = "text-center";
         setTimeout(() => {
             spiner.style.display = "none";

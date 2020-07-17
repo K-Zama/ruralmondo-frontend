@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Ruralmondo - Login</title>
+    <title>Ruralmondo - Invite</title>
 </head>
 
 <body class="page-login">
@@ -21,7 +21,7 @@
     <main class="container-fluid">
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-md-3">
-                <h3>Iniciar sesión</h3>
+                <h3>Has sido invitado</h3>
                 <hr>
                 <form id="formularioLogin">
                     <div class="form-group">
@@ -32,7 +32,11 @@
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block" id="sendbtn">Empezar las risas</button>
+                    <div class="form-group">
+                        <label for="password">Repite la password escogida</label>
+                        <input type="password" class="form-control" id="password1">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" id="sendbtn">Enviar los datos de registro</button>
                     <div class="spinner-border text-primary" role="status" id="spiner">
                         <span class="sr-only">Loading...</span>
                     </div>
