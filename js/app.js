@@ -4,13 +4,13 @@
 
 const usernameLogin = document.querySelector("#username");
 const passwordLogin = document.querySelector("#password");
-const formularioLogin = document.querySelector("#formularioLogin");
+const formLogin = document.querySelector("#formLogin");
 const spiner = document.querySelector("#spiner");
 
 spiner.style.display = "none";
 
 // Event Listeners
-formularioLogin.addEventListener("submit", e => {
+formLogin.addEventListener("submit", e => {
     e.preventDefault();
 
 
@@ -18,20 +18,20 @@ formularioLogin.addEventListener("submit", e => {
         const error = document.createElement("p");
         error.innerHTML = `Por favor, no dejes ningún apartado sin rellenar`;
         error.classList = "alert alert-danger text-center";
-        formularioLogin.appendChild(error);
+        formLogin.appendChild(error);
         setTimeout(() => {
             error.remove();
         }, 2000)
     } else {
         spiner.style.display = "flex";
-        const bienvenida = document.createElement("h5");
-        bienvenida.innerHTML = `¡Coge tu 9 de Airshoft con cañón turcao!`;
-        bienvenida.classList = "text-center";
+        const wellcome = document.createElement("h5");
+        wellcome.innerHTML = `¡Coge tu 9 de Airshoft con cañón turcao!`;
+        wellcome.classList = "text-center";
         setTimeout(() => {
             spiner.style.display = "none";
-            formularioLogin.appendChild(bienvenida);
+            formLogin.appendChild(wellcome);
             setTimeout(() => {
-                bienvenida.remove();
+                wellcome.remove();
             }, 3000);
         }, 2000);
     }
