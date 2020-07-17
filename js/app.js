@@ -15,7 +15,7 @@ formularioLogin.addEventListener("submit", e => {
     e.preventDefault();
 
 
-    if (usernameLogin.value === "" || passwordLogin.value === "" || passwordLogin1 === "") {
+    if (usernameLogin.value === "" || passwordLogin.value === "" || passwordLogin1.value === "") {
         const error = document.createElement("p");
         error.innerHTML = `Por favor, no dejes ningún apartado sin rellenar`;
         error.classList = "alert alert-danger text-center";
@@ -25,12 +25,12 @@ formularioLogin.addEventListener("submit", e => {
         }, 2000)
     } else {
         spiner.style.display = "flex";
-        const bienvenida = document.createElement("h5");
-        bienvenida.innerHTML = `¡Tus datos son correctos!`;
-        bienvenida.classList = "text-center";
+        const wellcome = document.createElement("h5");
+        wellcome.innerHTML = `¡Tus datos son correctos!`;
+        wellcome.classList = "text-center";
         setTimeout(() => {
             spiner.style.display = "none";
-            formularioLogin.appendChild(bienvenida);
+            formularioLogin.appendChild(wellcome);
             setTimeout(() => {
                 bienvenida.remove();
             }, 3000);
