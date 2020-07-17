@@ -32,7 +32,7 @@ formularioLogin.addEventListener("submit", e => {
             spiner.style.display = "none";
             formularioLogin.appendChild(wellcome);
             setTimeout(() => {
-                bienvenida.remove();
+                wellcome.remove();
             }, 3000);
         }, 2000);
     }
