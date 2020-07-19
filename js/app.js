@@ -1,39 +1,39 @@
 "use strict"
 
+/* 
+    Hacer dos objetos JSON para probar la interfaz
+    poder elegir los objetos en el list y que cambie la clase de uno a otro la clase active
+    Pintar la alineación cuando estén escogidos los jugadores
+    Poner el presupuesto y que se vayan restando de los jugadores escogidos 
+*/
+
+
+
 // Variables
+const playerList = document.querySelector("#playerList");
+const players = document.querySelectorAll("#player");
+const playerPrice = document.querySelector("#playerPrice");
+const btnPlayers = document.querySelector("#btn-players")
 
-const usernameLogin = document.querySelector("#username");
-const passwordLogin = document.querySelector("#password");
-const passwordLogin1 = document.querySelector("#password1");
-const formularioLogin = document.querySelector("#formularioLogin");
-const spiner = document.querySelector("#spiner");
+// JSON
+class Player {
+    constructor(name, cost) {
+        this.name = name;
+        this.cost = cost;
+    }
+}
 
-spiner.style.display = "none";
+const camacho = new Player("Camacho", 5);
 
-// Event Listeners
-formularioLogin.addEventListener("submit", e => {
+const josefe = new Player("Josefe", 2);
+
+
+function addPlayer(e) {
     e.preventDefault();
 
-
-    if (usernameLogin.value === "" || passwordLogin.value === "" || passwordLogin1.value === "") {
-        const error = document.createElement("p");
-        error.innerHTML = `Por favor, no dejes ningún apartado sin rellenar`;
-        error.classList = "alert alert-danger text-center";
-        formularioLogin.appendChild(error);
-        setTimeout(() => {
-            error.remove();
-        }, 2000)
-    } else {
-        spiner.style.display = "flex";
-        const wellcome = document.createElement("h5");
-        wellcome.innerHTML = `¡Tus datos son correctos!`;
-        wellcome.classList = "text-center";
-        setTimeout(() => {
-            spiner.style.display = "none";
-            formularioLogin.appendChild(wellcome);
-            setTimeout(() => {
-                wellcome.remove();
-            }, 3000);
-        }, 2000);
+    for (let player of players) {
+        player.addEventListener("click", e => {
+            console.log("funciona");
+        })
     }
-});
+}
