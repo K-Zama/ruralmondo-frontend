@@ -36,7 +36,7 @@ players[1].innerHTML = `${josefe.name} <span class="badge badge-primary badge-pi
 
 
 const budgetUser = document.querySelector("#presupuesto");
-budgetUser.innerHTML = `${9}€`
+budgetUser.innerHTML = `${9}€`;
 
 budgetUser.setAttribute("data-budget", 9);
 
@@ -46,12 +46,31 @@ for (let player of players) {
     player.addEventListener("click", function(e) {
         player.classList.toggle("active");
 
-        let result;
-        if (player.classList.contains("active")) {
-            result = budgetUser.dataset.budget - this.dataset.price;
+        if (budgetUser.dataset.budget >= 0) {
+            if (player.classList.contains("active")) {
+                budgetUser.dataset.budget -= this.dataset.price;
+                budgetUser.innerHTML = `${budgetUser.dataset.budget}€`;
+            } else {
+                budgetUser.dataset.budget = Number(budgetUser.dataset.budget) + Number(this.dataset.price);
+                budgetUser.innerHTML = `${budgetUser.dataset.budget}€`;
+            };
         } else {
-            result += this.dataset.price;
-        };
-        budgetUser.innerHTML = `${result}€`;
+            let error = document.createElement("div")
+            error.innerHTML = `Te has pasado del presupuesto, recarga la página`;
+            error.classList.add("alert", "alert-danger");
+
+            document.querySelector("#error").appendChild(error);
+            setTimeout(() => {
+                error.remove();
+            }, 2000);
+        }
     });
 };
+
+btnPlayers.addEventListener(("click"), function(e) {
+    for (let player of players) {
+        while (player.classList.contains("active")) {
+            const alineacion = document.querySelector("#alineacion");
+        };
+    };
+});
