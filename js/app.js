@@ -67,10 +67,26 @@ for (let player of players) {
     });
 };
 
-btnPlayers.addEventListener(("click"), function(e) {
-    for (let player of players) {
-        while (player.classList.contains("active")) {
-            const alineacion = document.querySelector("#alineacion");
+function printPlayers() {
+    btnPlayers.addEventListener(("click"), function(e) {
+        for (let player of players) {
+            if (player.classList.contains("active")) {
+                const alineacion = document.querySelector("#alineacion");
+                const div = document.createElement("div");
+
+                div.innerHTML = `
+                <div class="col-3 mt-3">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">${player.textContent}</h5>
+                        </div>
+                    </div>
+                </div>`;
+
+                alineacion.appendChild(div);
+            };
         };
-    };
-});
+    });
+}
+
+printPlayers();
